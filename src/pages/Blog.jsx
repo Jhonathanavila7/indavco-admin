@@ -53,7 +53,7 @@ const Blog = () => {
       };
 
       if (editingPost) {
-        await blogAPI.update(editingPost._id, cleanedData);
+       await blogAPI.update(editingPost._id || editingPost.id, cleanedData);
       } else {
         await blogAPI.create(cleanedData);
       }
@@ -202,7 +202,7 @@ const Blog = () => {
                       Editar
                     </button>
                     <button
-                      onClick={() => handleDelete(post._id)}
+                      onClick={() => handleDelete(post._id || post.id)}
                       className="text-red-600 hover:text-red-800"
                     >
                       Eliminar
