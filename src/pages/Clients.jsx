@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { clientsAPI } from '../services/api';
 
+const API_BASE = 'https://indavco-backend.onrender.com';
+
 const Clients = () => {
   const [clients, setClients] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -88,7 +90,7 @@ const Clients = () => {
         isActive: client.isActive,
         order: client.order
       });
-      setLogoPreview(`http://localhost:5000${client.logo}`);
+      setLogoPreview(`${API_BASE}${client.logo}`);
     } else {
       setEditingClient(null);
       setFormData({
@@ -135,7 +137,7 @@ const Clients = () => {
             >
               <div className="flex justify-center mb-4">
                 <img
-                  src={`http://localhost:5000${client.logo}`}
+                  src={`${API_BASE}${client.logo}`}
                   alt={client.name}
                   className="h-24 w-auto object-contain"
                 />
