@@ -249,8 +249,8 @@ const Dashboard = () => {
             </li>
           </ul>
           <div className="mt-6 pt-6 border-t border-white border-opacity-20">
-            
-             <a href="http://localhost:5173"
+            <a
+              href="https://dulcet-bienenstitch-fd15a1.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-white bg-opacity-10 hover:bg-opacity-20 py-3 rounded-lg transition font-semibold"
